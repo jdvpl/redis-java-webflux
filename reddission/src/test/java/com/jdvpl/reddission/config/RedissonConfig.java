@@ -13,7 +13,7 @@ public class RedissonConfig {
     public RedissonClient getClient() {
         if (Objects.isNull(redissonClient)) {
             Config config = new Config();
-            config.useSingleServer().setAddress("redis://1270.0.0.1:6379");
+            config.useSingleServer().setAddress("redis://localhost:6379");
             redissonClient = Redisson.create(config);
         }
         return redissonClient;
